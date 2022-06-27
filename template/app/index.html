@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="{% static 'app/apple-touch-icon.png' %}">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Google Font -->
@@ -16,27 +16,27 @@
 
     <!-- all css here -->
     <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}">
     <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{% static 'app/css/animate.css' %}">
     <!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/jquery-ui.min.css' %}">
     <!-- meanmenu css -->
-    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/meanmenu.min.css' %}">
     <!-- nivo-slider css -->
-    <link rel="stylesheet" href="lib/css/nivo-slider.css">
+    <link rel="stylesheet" href="{% static 'app/lib/css/nivo-slider.css' %}">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="{% static 'app/css/owl.carousel.css' %}">
     <!-- flaticon css -->
-    <link rel="stylesheet" href="css/shopick-icon.css">
+    <link rel="stylesheet" href="{% static 'app/css/shopick-icon.css' %}">
     <!-- pe-icon-7-stroke css -->
-    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="{% static 'app/css/pe-icon-7-stroke.css' %}">
     <!-- lightbox css -->
-    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/lightbox.min.css' %}">
     <!-- style css -->
-    <link rel="stylesheet" href="../../app/static/app/style.css">
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{% static 'app/css/responsive.css' %}">
     <!-- modernizr css -->
     <script src="{% static 'app/js/vendor/modernizr-2.8.3.min.js' %}"></script>
 </head>
@@ -96,7 +96,7 @@
             <div class="row">
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="logo">
-                        <a href="index.html"><img src="{% static 'app/img/logo.png' %}" alt=""/></a>
+                        <a href="{% static 'app/index.html' %}"><img src="{% static 'app/img/logo.png' %}" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-md-8 hidden-sm hidden-xs">
@@ -982,8 +982,8 @@
                                     <div class="single-product">
                                         <div class="product-photo">
                                             <a href="#">
-                                                <img class="primary-photo" src="img/best-sell/5.jpg" alt=""/>
-                                                <img class="secondary-photo" src="img/best-sell/1.jpg" alt=""/>
+                                                <img class="primary-photo" src="{% static 'app/img/best-sell/5.jpg' %}" alt=""/>
+                                                <img class="secondary-photo" src="{% static 'app/img/best-sell/1.jpg' %}" alt=""/>
                                             </a>
                                             <div class="pro-action">
                                                 <a href="#" class="action-btn"><i
@@ -1013,8 +1013,8 @@
                                     <div class="single-product">
                                         <div class="product-photo">
                                             <a href="#">
-                                                <img class="primary-photo" src="img/best-sell/4.jpg" alt=""/>
-                                                <img class="secondary-photo" src="img/best-sell/1.jpg" alt=""/>
+                                                <img class="primary-photo" src="{% static 'app/img/best-sell/4.jpg' %}" alt=""/>
+                                                <img class="secondary-photo" src="{% static 'app/img/best-sell/1.jpg' %}" alt=""/>
                                             </a>
                                             <div class="pro-action">
                                                 <a href="#" class="action-btn"><i
@@ -1042,8 +1042,8 @@
                                     <div class="single-product">
                                         <div class="product-photo">
                                             <a href="#">
-                                                <img class="primary-photo" src="img/best-sell/6.jpg" alt=""/>
-                                                <img class="secondary-photo" src="img/best-sell/2.jpg" alt=""/>
+                                                <img class="primary-photo" src="{% static 'app/img/best-sell/6.jpg' %}" alt=""/>
+                                                <img class="secondary-photo" src="{% static 'app/img/best-sell/2.jpg' %}" alt=""/>
                                             </a>
                                             <div class="pro-action">
                                                 <a href="#" class="action-btn"><i
@@ -1077,8 +1077,8 @@
                                     <div class="single-product">
                                         <div class="product-photo">
                                             <a href="#">
-                                                <img class="primary-photo" src="img/best-sell/1.jpg" alt=""/>
-                                                <img class="secondary-photo" src="img/best-sell/6.jpg" alt=""/>
+                                                <img class="primary-photo" src="{% static 'app/img/best-sell/1.jpg' %}" alt=""/>
+                                                <img class="secondary-photo" src="{% static 'app/img/best-sell/6.jpg' %}" alt=""/>
                                             </a>
                                             <div class="pro-action">
                                                 <a href="#" class="action-btn"><i
@@ -1106,8 +1106,8 @@
                                     <div class="single-product">
                                         <div class="product-photo">
                                             <a href="#">
-                                                <img class="primary-photo" src="img/best-sell/4.jpg" alt=""/>
-                                                <img class="secondary-photo" src="img/best-sell/1.jpg" alt=""/>
+                                                <img class="primary-photo" src="{% static 'app/img/best-sell/4.jpg' %}" alt=""/>
+                                                <img class="secondary-photo" src="{% static 'app/img/best-sell/1.jpg' %}" alt=""/>
                                             </a>
                                             <div class="pro-action">
                                                 <a href="#" class="action-btn"><i
@@ -1137,8 +1137,8 @@
                                     <div class="single-product">
                                         <div class="product-photo">
                                             <a href="#">
-                                                <img class="primary-photo" src="img/best-sell/2.jpg" alt=""/>
-                                                <img class="secondary-photo" src="img/best-sell/4.jpg" alt=""/>
+                                                <img class="primary-photo" src="{% static 'app/img/best-sell/2.jpg' %}" alt=""/>
+                                                <img class="secondary-photo" src="{% static 'app/img/best-sell/4.jpg' %}" alt=""/>
                                             </a>
                                             <div class="pro-action">
                                                 <a href="#" class="action-btn"><i
