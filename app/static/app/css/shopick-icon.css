@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'shopick';
+    src:    url('../fonts/shopick.eot?y1taug');
+    src:    url('../fonts/shopick.eot?y1taug#iefix') format('embedded-opentype'),
+        url('../fonts/shopick.ttf?y1taug') format('truetype'),
+        url('../fonts/shopick.woff?y1taug') format('woff'),
+        url('../fonts/shopick.svg?y1taug#shopick') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'shopick' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sp-angle-left:before {
+    content: "\e900";
+}
+.sp-angle-right:before {
+    content: "\e901";
+}
+.sp-arrow-bold-left:before {
+    content: "\e902";
+}
+.sp-arrow-bold-right:before {
+    content: "\e903";
+}
+.sp-arrow-circle-left:before {
+    content: "\e904";
+}
+.sp-arrow-circle-right:before {
+    content: "\e905";
+}
+.sp-arrow-long-left:before {
+    content: "\e906";
+}
+.sp-arrow-long-right:before {
+    content: "\e907";
+}
+.sp-business:before {
+    content: "\e908";
+}
+.sp-circle-close:before {
+    content: "\e909";
+}
+.sp-comment:before {
+    content: "\e90a";
+}
+.sp-compare:before {
+    content: "\e90b";
+}
+.sp-compare-alt:before {
+    content: "\e90c";
+}
+.sp-email:before {
+    content: "\e90d";
+}
+.sp-facebook:before {
+    content: "\e90e";
+}
+.sp-full-view:before {
+    content: "\e90f";
+}
+.sp-gear:before {
+    content: "\e910";
+}
+.sp-google:before {
+    content: "\e911";
+}
+.sp-grid-view:before {
+    content: "\e912";
+}
+.sp-head-phone:before {
+    content: "\e913";
+}
+.sp-heart:before {
+    content: "\e914";
+}
+.sp-like:before {
+    content: "\e915";
+}
+.sp-linkedin:before {
+    content: "\e916";
+}
+.sp-list-view:before {
+    content: "\e917";
+}
+.sp-map-marker:before {
+    content: "\e918";
+}
+.sp-monitor:before {
+    content: "\e919";
+}
+.sp-phone:before {
+    content: "\e91a";
+}
+.sp-quote:before {
+    content: "\e91b";
+}
+.sp-search:before {
+    content: "\e91c";
+}
+.sp-share:before {
+    content: "\e91d";
+}
+.sp-shopping-bag:before {
+    content: "\e91e";
+}
+.sp-shopping-cart:before {
+    content: "\e91f";
+}
+.sp-star:before {
+    content: "\e920";
+}
+.sp-transport:before {
+    content: "\e921";
+}
+.sp-twitter:before {
+    content: "\e922";
+}
+
