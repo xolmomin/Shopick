@@ -1,7 +1,7 @@
 from django.urls import path
 
-from views import about
+from views import  AboutPage
 
 urlpatterns = [
-    path('about/',about,name='about'),
+    path('about/',AboutPage.as_view(),name='about'),
 ]

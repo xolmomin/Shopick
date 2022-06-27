@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
 
-def about(request):
-    return render(request,'app/about.html')
+
+class AboutPage(TemplateView):
+    template_name = 'app/about.html'
