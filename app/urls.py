@@ -18,6 +18,6 @@ urlpatterns = [
     path('single-product/', SingleProductPage.as_view(), name='single_product'),
     path('thank-you/', ThankYouPage.as_view(), name='thank_you'),
     path('wish-list/', WishListPage.as_view(), name='wishlist'),
-
 ]
+
 
