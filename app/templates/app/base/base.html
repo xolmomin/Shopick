@@ -96,23 +96,16 @@
             <div class="row">
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="logo">
-                        <a href="index.html"><img src="{% static 'app/img/logo.png' %}" alt=""/></a>
+                        <a href="{% url 'index' %}"><img src="{% static 'app/img/logo.png' %}" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-md-8 hidden-sm hidden-xs">
                     <div class="main-menu pull-right">
                         <nav>
                             <ul>
-                                <li><a href="index.html">home</a>
-                                    <ul class="submenu">
-                                        <li class="submenu-title"><a href="#">Home pages</a></li>
-                                        <li><a href="index.html">Homepage Version 1</a></li>
-                                        <li><a href="index-2.html">Homepage Version 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html">mens</a></li>
-                                <li><a href="shop-list.html">womens</a></li>
-                                <li><a href="shop.html">shop</a>
+{#                                <li><a href="shop.html">mens</a></li>#}
+{#                                <li><a href="shop-list.html">womens</a></li>#}
+                                <li><a href="{% url 'shop' %}">shop</a>
                                     <div class="mega-menu">
 												<span>
 													<a class="mega-menu-title" href="#">WOMEN CLOTH</a>
@@ -147,33 +140,33 @@
 												</span>
                                     </div>
                                 </li>
-                                <li><a href="blog.html">blog</a>
+                                <li><a href="{% url 'blog' %}">blog</a>
                                     <ul class="submenu">
                                         <li class="submenu-title"><a href="#">Blog pages</a></li>
-                                        <li><a href="{% static 'app/blog.html' %}">Blog</a></li>
-                                        <li><a href="{% static 'app/single-blog.html' %}">Single-blog</a></li>
+                                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                                        <li><a href="{% url 'single_blog' %}">Single-blog</a></li>
                                     </ul>
                                 </li><!--
 										<li><a href="about.html">about</a></li> -->
                                 <li><a href="#">Pages</a>
                                     <ul class="submenu">
                                         <li class="submenu-title"><a href="#">All pages</a></li>
-                                        <li><a href="{% static 'app/shop.html' %}">Shop</a></li>
-                                        <li><a href="{% static 'app/shop-list.html' %}">Shop-List</a></li>
-                                        <li><a href="{% static 'app/single-product.html' %}">Single Product</a></li>
-                                        <li><a href="{% static 'app/cart.html' %}">Shopping Cart</a></li>
-                                        <li><a href="{% static 'app/wishlist.html' %}">Wishlist</a></li>
-                                        <li><a href="{% static 'app/checkout.html' %}">Checkout</a></li>
-                                        <li><a href="{% static 'app/login.html' %}">Login</a></li>
-                                        <li><a href="{% static 'app/my-account.html' %}">My Account</a></li>
-                                        <li><a href="{% static 'app/blog.html' %}">Blog</a></li>
-                                        <li><a href="{% static 'app/single-blog.html' %}">Single-Blog</a></li>
-                                        <li><a href="{% static 'app/about.html' %}">About</a></li>
-                                        <li><a href="{% static 'app/404.html' %}">404</a></li>
-                                        <li><a href="{% static 'app/contact.html' %}">Contact Us</a></li>
+                                        <li><a href="{% url 'shop' %}">Shop</a></li>
+                                        <li><a href="{% url 'shop-list' %}">Shop-List</a></li>
+                                        <li><a href="{% url 'single_product' %}">Single Product</a></li>
+                                        <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                        <li><a href="{% url 'login' %}">Login</a></li>
+                                        <li><a href="{% url 'my_acc' %}">My Account</a></li>
+                                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                                        <li><a href="{% url 'single_blog' %}">Single-Blog</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+{#                                        <li><a href="{% url '' %}">404</a></li>#}
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{% static 'app/contact.html' %}">contact</a></li>
+                                <li><a href="{% url 'contact' %}">contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -236,41 +229,33 @@
                     <div class="mobile-menu">
                         <nav id="dropdown">
                             <ul>
-                                <li><a href="{% static 'app/index.html' %}">home</a>
-                                    <ul class="submenu">
-                                        <li class="submenu-title"><a href="#">Home pages</a></li>
-                                        <li><a href="{% static 'app/index.html' %}">Homepage Version 1</a></li>
-                                        <li><a href="{% static 'app/index-2.html' %}">Homepage Version 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{% static 'app/shop.html' %}">mens</a></li>
-                                <li><a href="{% static 'app/shop-list.html' %}">womens</a></li>
-                                <li><a href="{% static 'app/shop.html' %}">shop</a></li>
-                                <li><a href="{% static 'app/blog.html' %}">blog</a>
+                                <li><a href="{% url 'index' %}">home</a></li>
+                                <li><a href="{% url 'shop' %}">shop</a></li>
+                                <li><a href="{% url 'blog' %}">blog</a>
                                     <ul class="submenu">
                                         <li class="submenu-title"><a href="#">Blog pages</a></li>
-                                        <li><a href="{% static 'app/blog.html' %}">Blog</a></li>
-                                        <li><a href="{% static 'app/single-blog.html' %}">Single-blog</a></li>
+                                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                                        <li><a href="{% url 'single_blog' %}">Single-blog</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Pages</a>
                                     <ul class="submenu">
                                         <li class="submenu-title"><a href="#">All pages</a></li>
-                                        <li><a href="{% static 'app/shop.html' %}">Shop</a></li>
-                                        <li><a href="{% static 'app/shop-list.html' %}">Shop-List</a></li>
-                                        <li><a href="{% static 'app/single-product.html' %}">Single Product</a></li>
-                                        <li><a href="{% static 'app/cart.html' %}">Shopping Cart</a></li>
-                                        <li><a href="{% static 'app/wishlist.html' %}">Wishlist</a></li>
-                                        <li><a href="{% static 'app/checkout.html' %}">Checkout</a></li>
-                                        <li><a href="{% static 'app/login.html' %}">Login</a></li>
-                                        <li><a href="{% static 'app/my-account.html' %}">My Account</a></li>
-                                        <li><a href="{% static 'app/blog.html' %}">Blog</a></li>
-                                        <li><a href="{% static 'app/single-blog.html' %}">Single-Blog</a></li>
-                                        <li><a href="{% static 'app/about.html' %}">About</a></li>
-                                        <li><a href="{% static 'app/contact.html' %}">Contact Us</a></li>
+                                        <li><a href="{% url 'shop' %}">Shop</a></li>
+                                        <li><a href="{% url 'shop-list' %}">Shop-List</a></li>
+                                        <li><a href="{% url 'single_product' %}">Single Product</a></li>
+                                        <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                        <li><a href="{% url 'login' %}">Login</a></li>
+                                        <li><a href="{% url 'my_acc' %}">My Account</a></li>
+                                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                                        <li><a href="{% url 'single_blog' %}">Single-Blog</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{% static 'app/contact.html' %}">contact</a></li>
+                                <li><a href="{% url 'contact' %}">contact</a></li>
                             </ul>
                         </nav>
                     </div>
