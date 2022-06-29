@@ -4,6 +4,7 @@ from django.urls import path
 from app.views.views import AboutPage, IndexPage, BlogPage, CartPage, CheckoutPage, ContactPage, ShopPage, ShopListPage, SingleBlogPage, SingleProductPage, ThankYouPage, WishListPage
 
 from app.views.auth import LoginPage, MyAccPage
+# from app.views.auth import register_page
 from app.views.auth import RegisterPage
 
 urlpatterns = [
@@ -14,7 +15,7 @@ urlpatterns = [
     path('contact/', ContactPage.as_view(), name='contact'),
     path('about/', AboutPage.as_view(), name='about'),
     path('login/', LoginPage.as_view(), name='login'),
-    # path('register/',RegisterPage.as_view(),name='register'),
+    path('register/',RegisterPage.as_view(),name='register'),
     path('my-account/', MyAccPage.as_view(), name='my_acc'),
     path('shop/', ShopPage.as_view(), name='shop'),
     path('shop-list/', ShopListPage.as_view(), name='shop-list'),

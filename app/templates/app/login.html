@@ -1,7 +1,7 @@
 {% extends 'app/base/base.html' %}
-{% load static %}
 {% block content %}
-    <title>{% block title %}Login{% endblock title %}</title>
+    {% load static %}
+    <!doctype html>
     <section class="page-content">
         <!-- PAGE-BANNER START -->
         <div class="page-banner-area  margin-bottom-80">
@@ -33,7 +33,8 @@
                                     <p>If you have an account with us, Please log in.</p>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <input type="text" class="custom-form" name="email" placeholder="Username"/>
+                                            <input type="text" class="custom-form" name="email"
+                                                   placeholder="Email Address"/>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -48,87 +49,43 @@
                         </form>
                     </div>
                     <!-- Registered-Customers End -->
-                    <div class="col-md-6">
-                        <form method="get" action="{% url 'login' %}">
-                            {% csrf_token %}
-                            <div class="new-customers">
-                                <h2 class="login-title">NEW CUSTOMERS</h2>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <input class="custom-form" name="username" type="text" placeholder="Username"/>
+                    <div class="brand-logo-area margin-bottom-80">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-12">
+                                    <div class="brand-brief">
+                                        <h2 class="border-left-right">they are with us</h2>
+                                        <p>It is a long established fact that a reader will be distracted by the
+                                            readable content of a page when looking at its layout. </p>
                                     </div>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <input class="custom-form" name="email" type="text" placeholder="Email"/>
+                                <div class="col-md-7 col-sm-12">
+                                    <div class="brand-logo fix">
+                                        <div class="single-logo">
+                                            <img src="{% static 'app/img/brand/1.png' %}" alt=""/>
+                                        </div>
+                                        <div class="single-logo">
+                                            <img src="{% static 'app/img/brand/2.png' %}" alt=""/>
+                                        </div>
+                                        <div class="single-logo">
+                                            <img src="{% static 'app/img/brand/3.png' %}" alt=""/>
+                                        </div>
+                                        <div class="single-logo">
+                                            <img src="{% static 'app/img/brand/4.png' %}" alt=""/>
+                                        </div>
+                                        <div class="single-logo">
+                                            <img src="{% static 'app/img/brand/5.png' %}" alt=""/>
+                                        </div>
+                                        <div class="single-logo">
+                                            <img src="{% static 'app/img/brand/6.png' %}" alt=""/>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <input class="custom-form" name="password" type="password"
-                                               placeholder="Password"/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <input class="custom-form" name="confirm_password" type="password"
-                                               placeholder="Confirm Password"/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <input type="submit" class="custom-form custom-submit no-margin"
-                                                value="register"/>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="submit" class="custom-form custom-submit no-margin" value="clear"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- LOGIN-AREA END -->
-        <!-- BRAND-LOGO-AREA START -->
-        <div class="brand-logo-area margin-bottom-80">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-sm-12">
-                        <div class="brand-brief">
-                            <h2 class="border-left-right">they are with us</h2>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of
-                                a page when looking at its layout. </p>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-sm-12">
-                        <div class="brand-logo fix">
-                            <div class="single-logo">
-                                <img src="{% static 'app/img/brand/1.png' %}" alt=""/>
-                            </div>
-                            <div class="single-logo">
-                                <img src="{% static 'app/img/brand/2.png' %}" alt=""/>
-                            </div>
-                            <div class="single-logo">
-                                <img src="{% static 'app/img/brand/3.png' %}" alt=""/>
-                            </div>
-                            <div class="single-logo">
-                                <img src="{% static 'app/img/brand/4.png' %}" alt=""/>
-                            </div>
-                            <div class="single-logo">
-                                <img src="{% static 'app/img/brand/5.png' %}" alt=""/>
-                            </div>
-                            <div class="single-logo">
-                                <img src="{% static 'app/img/brand/6.png' %}" alt=""/>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- BRAND-LOGO-AREA END -->
+                    <!-- BRAND-LOGO-AREA END -->
     </section>
+
+
 {% endblock content %}
