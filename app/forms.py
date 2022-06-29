@@ -46,3 +46,10 @@ class RegistrationForm(Form):
         )
         user.set_password(self.cleaned_data.get('password'))
         user.save()
+
+
+class UserModelForm:
+    class Meta:
+        model = User
+        exclude = ()
+
