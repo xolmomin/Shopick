@@ -8,7 +8,7 @@ from app.models import User
 
 class RegistrationForm(Form):
     username = forms.CharField()
-    email = forms.CharField(max_length=255)
+    email = forms.EmailField(max_length=255)
     password = forms.CharField(max_length=255)
     confirm_password = forms.CharField(max_length=255)
 
@@ -53,4 +53,3 @@ class UserModelForm:
     class Meta:
         model = User
         exclude = ()
-
