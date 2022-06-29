@@ -1,0 +1,47 @@
+{% extends 'app/base/base.html' %}
+{% block content %}
+{% load static %}
+<div class="col-md-6">
+    <form action="#">
+        <div class="new-customers">
+            <h2 class="login-title">NEW USER</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input class="custom-form" type="text" placeholder="Username"/>
+                </div>
+                <div class="col-sm-12">
+                    <input class="custom-form" type="email" placeholder="Email"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input class="custom-form" type="password" placeholder="Password"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input class="custom-form" type="password" placeholder="Confirm Password"/>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" checked="checked" name="create-account"/>
+                    Sign up for our newsletter!
+                </label>
+                <label>
+                    <input type="checkbox" name="billing-address"/>
+                    Receive special offers from our partners!
+                </label>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="submit" class="custom-form custom-submit no-margin" value="register"/>
+                </div>
+                <div class="col-sm-6">
+                    <input type="submit" class="custom-form custom-submit no-margin" value="clear"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
