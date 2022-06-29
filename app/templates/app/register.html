@@ -2,25 +2,26 @@
 {% block content %}
 {% load static %}
 <div class="col-md-6">
-    <form action="#">
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
         <div class="new-customers">
             <h2 class="login-title">NEW USER</h2>
             <div class="row">
                 <div class="col-sm-12">
-                    <input class="custom-form" type="text" placeholder="Username"/>
+                    <input class="custom-form" type="text" name="username" placeholder="Username"/>
                 </div>
                 <div class="col-sm-12">
-                    <input class="custom-form" type="email" placeholder="Email"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <input class="custom-form" type="password" placeholder="Password"/>
+                    <input class="custom-form" type="email" name="email" placeholder="Email"/>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <input class="custom-form" type="password" placeholder="Confirm Password"/>
+                    <input class="custom-form" type="password" name="password" placeholder="Password"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input class="custom-form" type="password" name="confirm_password" placeholder="Confirm Password"/>
                 </div>
             </div>
             <div class="checkbox">

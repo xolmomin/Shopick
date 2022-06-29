@@ -10,11 +10,12 @@ class RegistrationForm(Form):
     username = forms.CharField()
     email = forms.CharField(max_length=255)
     password = forms.CharField(max_length=255)
+    confirm_password = forms.CharField(max_length=255)
 
     def clean_username(self):
         username = self.data.get('username')
 
-        if not User.objects.filter(username=username).exists():
+        if User.objects.filter(username=username).exists():
             raise ValidationError("This username already taken")
 
         return username
@@ -22,7 +23,7 @@ class RegistrationForm(Form):
     def clean_email(self):
         email = self.data.get('email')
 
-        if not User.objects.filter('email').exists():
+        if User.objects.filter(email=email).exists():
             raise ValidationError("This email already taken")
 
         return email
