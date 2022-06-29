@@ -50,5 +50,6 @@ class RegistrationForm(Form):
 
 class UserModelForm:
     class Meta:
+        model = User
         exclude = ()
 
