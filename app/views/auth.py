@@ -2,7 +2,6 @@ from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, FormView
 from app.forms import RegistrationForm
-from app.forms import UserModelForm
 
 
 class LoginPage(TemplateView):
