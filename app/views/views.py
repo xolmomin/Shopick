@@ -26,14 +26,6 @@ class AboutPage(TemplateView):
     template_name = 'app/about.html'
 
 
-class LoginPage(TemplateView):
-    template_name = 'app/login.html'
-
-
-class MyAccPage(TemplateView):
-    template_name = 'app/my-account.html'
-
-
 class ShopPage(TemplateView):
     template_name = 'app/shop.html'
 
@@ -57,8 +49,5 @@ class ThankYouPage(TemplateView):
 class WishListPage(TemplateView):
     template_name = 'app/wishlist.html'
 
-
 # def error(request,exception):
 #     return render(request,'app/404.html')
-
-

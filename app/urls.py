@@ -1,8 +1,9 @@
 
 from django.urls import path
 
-from views import AboutPage, IndexPage, BlogPage, CartPage, CheckoutPage, ContactPage, LoginPage, MyAccPage, ShopPage, \
-    ShopListPage, SingleBlogPage, SingleProductPage, ThankYouPage, WishListPage
+from app.views.views import AboutPage, IndexPage, BlogPage, CartPage, CheckoutPage, ContactPage, ShopPage, ShopListPage, SingleBlogPage, SingleProductPage, ThankYouPage, WishListPage
+
+from app.views.auth import LoginPage, MyAccPage
 
 urlpatterns = [
     path('', IndexPage.as_view(), name='index'),
