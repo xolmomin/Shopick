@@ -56,3 +56,9 @@ class ThankYouPage(TemplateView):
 
 class WishListPage(TemplateView):
     template_name = 'app/wishlist.html'
+
+
+# def error(request,exception):
+#     return render(request,'app/404.html')
+
+

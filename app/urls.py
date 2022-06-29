@@ -1,3 +1,4 @@
+
 from django.urls import path
 
 from views import AboutPage, IndexPage, BlogPage, CartPage, CheckoutPage, ContactPage, LoginPage, MyAccPage, ShopPage, \
@@ -20,4 +21,5 @@ urlpatterns = [
     path('wish-list/', WishListPage.as_view(), name='wishlist'),
 ]
 
+# handler404 = 'app.views.error'
 
