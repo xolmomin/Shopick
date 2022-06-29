@@ -6,13 +6,13 @@ from app.models import User
 
 
 class LoginPage(TemplateView):
-    template_name = 'app/login.html'
+    template_name = 'app/auth/login.html'
 
 
 class RegisterPage(FormView):
     form_class = RegistrationForm
     success_url = reverse_lazy('login')
-    template_name = 'app/register.html'
+    template_name = 'app/auth/register.html'
 
     def form_valid(self, form):
         form.save()
@@ -22,20 +22,5 @@ class RegisterPage(FormView):
         return super().form_invalid(form)
 
 
-# def register_page(request):
-#     form = RegistrationForm()
-#     if request.POST:
-#         form = RegistrationForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('login')
-#
-#     return render(request,'app/register.html',{'form':form})
-
-
-
-
-
-
 class MyAccPage(TemplateView):
-    template_name = 'app/my-account.html'
+    template_name = 'app/auth/my-account.html'

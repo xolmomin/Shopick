@@ -1,63 +1,50 @@
 {% extends 'app/base/base.html' %}
 {% block content %}
     {% load static %}
-{#    <div class="card-body p-4 p-sm-5">#}
-        <div class="row flex-between-center mb-2" style="color: red">
-            {% if messages %}
-                {% for message in messages %}
-                    <p>{{ message }}</p>
-                {% endfor %}
-            {% endif %}
-
-            {% if form.errors %}
-                <p>{{ form.errors }}</p>
-            {% endif %}
-        </div>
-        <div class="col-md-6">
-            <form action="{% url 'register' %}" method="post">
-                {% csrf_token %}
-                <div class="new-customers">
-                    <h2 class="login-title">New Account</h2>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <input class="custom-form" name="username" type="text" placeholder="Username"/>
-                        </div>
-                        <div class="col-sm-12">
-                            <input class="custom-form" name="email" type="email" placeholder="Email"/>
-                        </div>
+    {% block title %}Register{% endblock title %}
+    <div class="col-md-6">
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="new-customers">
+                <h2 class="login-title">Register</h2>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input class="custom-form" type="text" name="username" placeholder="Username"/>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <input class="custom-form" name="password" type="password" placeholder="Password"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <input class="custom-form" name="confirm_password" type="password"
-                                   placeholder="Confirm Password"/>
-                        </div>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" checked="checked" name="create-account"/>
-                            Sign up for our newsletter!
-                        </label>
-                        <label>
-                            <input type="checkbox" name="billing-address"/>
-                            Receive special offers from our partners!
-                        </label>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <input type="submit" class="custom-form custom-submit no-margin" value="register"/>
-                        </div>
-                        <div class="col-sm-6">
-                            <input type="submit" class="custom-form custom-submit no-margin" value="clear"/>
-                        </div>
+                    <div class="col-sm-12">
+                        <input class="custom-form" type="email" name="email" placeholder="Email"/>
                     </div>
                 </div>
-            </form>
-        </div>
-{#    </div>#}
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input class="custom-form" type="password" name="password" placeholder="Password"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input class="custom-form" type="password" name="confirm_password"
+                               placeholder="Confirm Password"/>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" checked="checked" name="create-account"/>
+                        Sign up for our newsletter!
+                    </label>
+                    <label>
+                        <input type="checkbox" name="billing-address"/>
+                        Receive special offers from our partners!
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="submit" class="custom-form custom-submit no-margin" value="register"/>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="submit" class="custom-form custom-submit no-margin" value="clear"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 {% endblock %}
-

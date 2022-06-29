@@ -7,4 +7,3 @@ from django.db import models
 
 class User(AbstractUser):
     email = models.EmailField(unique=True,max_length=255,null=True)
-
