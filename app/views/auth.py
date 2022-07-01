@@ -22,5 +22,15 @@ class RegisterPage(FormView):
         return super().form_invalid(form)
 
 
+# def register(request):
+#     form = RegistrationForm()
+#     if request.method == 'POST':
+#         form = RegistrationForm(form)
+#         if form.is_valid():
+#             form.save()
+#         return redirect('index')
+#     return render(request, 'app/auth/register.html')
+
+
 class MyAccPage(TemplateView):
     template_name = 'app/auth/my-account.html'

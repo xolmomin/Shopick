@@ -1,6 +1,5 @@
 {% extends 'app/base/base.html' %}
 {% block content %}
-    {% block title %}Login{% endblock title %}
     {% load static %}
     <section class="page-content">
         <!-- PAGE-BANNER START -->
@@ -11,7 +10,7 @@
                         <div class="page-banner-menu">
                             <h2 class="page-banner-title">Login</h2>
                             <ul>
-                                <li><a href="../index.html">home</a></li>
+                                <li><a href="{% url 'index' %}">home</a></li>
                                 <li>Login</li>
                             </ul>
                         </div>
@@ -19,9 +18,12 @@
                 </div>
             </div>
         </div>
+        <!-- PAGE-BANNER END -->
+        <!-- LOGIN-AREA START -->
         <div class="lognin-area">
             <div class="container">
                 <div class="row">
+                    <!-- Registered-Customers Start -->
                     <div class="col-md-6">
                         <form action="#">
                             <div class="registered-customers">
@@ -45,7 +47,6 @@
                             </div>
                         </form>
                     </div>
-                    <!-- Registered-Customers End -->
                     <div class="brand-logo-area margin-bottom-80">
                         <div class="container">
                             <div class="row">
@@ -81,11 +82,6 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
-            </div>
-        </div>
+                    <!-- BRAND-LOGO-AREA END -->
     </section>
-
-
 {% endblock content %}
