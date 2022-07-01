@@ -7,6 +7,8 @@ from app.models import User
 
 
 class RegistrationForm(Form):
+    first_name = forms.CharField(max_length=255)
+    last_name = forms.CharField(max_length=255)
     username = forms.CharField(max_length=255)
     email = forms.EmailField(max_length=255)
     password = forms.CharField(max_length=255)
@@ -40,10 +42,11 @@ class RegistrationForm(Form):
     @atomic
     def save(self):
         user = User.objects.create_user(
+            first_name = self.data.get('first_name'),
+            last_name = self.data.get('last_name'),
             username=self.cleaned_data.get('username'),
             email=self.cleaned_data.get('email'),
             is_active=False,
-
         )
         user.set_password(self.cleaned_data.get('password'))
         user.save()
