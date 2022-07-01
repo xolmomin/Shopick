@@ -1,7 +1,6 @@
 {% extends 'app/base/base.html' %}
 {% block content %}
     {% load static %}
-    <!doctype html>
     <section class="page-content">
         <!-- PAGE-BANNER START -->
         <div class="page-banner-area  margin-bottom-80">
@@ -11,7 +10,7 @@
                         <div class="page-banner-menu">
                             <h2 class="page-banner-title">Login</h2>
                             <ul>
-                                <li><a href="index.html">home</a></li>
+                                <li><a href="{% url 'index' %}">home</a></li>
                                 <li>Login</li>
                             </ul>
                         </div>
@@ -48,7 +47,6 @@
                             </div>
                         </form>
                     </div>
-                    <!-- Registered-Customers End -->
                     <div class="brand-logo-area margin-bottom-80">
                         <div class="container">
                             <div class="row">
@@ -86,6 +84,4 @@
                     </div>
                     <!-- BRAND-LOGO-AREA END -->
     </section>
-
-
 {% endblock content %}
