@@ -24,6 +24,14 @@
                 <div class="new-customers">
                     <h2 class="login-title">Create Account</h2>
                     <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" class="custom-form" name="first_name" placeholder="First Name"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="custom-form" name="last_name" placeholder="Last Name"/>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-12">
                             <input class="custom-form" name="username" type="text" placeholder="Username"/>
                         </div>
@@ -46,7 +54,7 @@
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" checked="checked" name="create-account"/>
+                            <input type="checkbox" checked="checked"/>
                             Sign up for our newsletter!
                         </label>
                         <label>
@@ -64,7 +72,18 @@
                     </div>
                 </div>
             </form>
+            <div class="row g-2 mt-2">
+                <form action="/accounts/google/login/" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-google-plus btn-sm d-block w-100" href="#">
+                                <span class="fab fa-google-plus-g me-2" data-fa-transform="grow-8">
+                                </span> google
+                    </button>
+                </form>
+            </div>
+
         </div>
+
         <!-- LOGIN-AREA END -->
         <!-- BRAND-LOGO-AREA START -->
         <div class="brand-logo-area margin-bottom-80">

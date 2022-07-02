@@ -66,27 +66,47 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="header-top-right pull-right">
-                        <ul>
-                            <li><a href="#">Account <span><i class="sp-gear"></i></span></a>
-                                <ul class="submenu">
-                                    <li><a href="{% url 'my_acc' %}">My Account</a></li>
-                                    <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
-                                    <li><a href="{% url 'checkout' %}">Checkout</a></li>
-                                    <li><a href="{% url 'login' %}">Login</a></li>
-                                    <li><a href="{% url 'register' %}">Register</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="header-search">
-                            <form action="#">
-                                <input type="text" placeholder="Search..."/>
-                                <button type="submit"><i class="sp-search"></i></button>
-                            </form>
+                {% if request.user.is_authenticated %}
+                    <div class="col-md-6 col-sm-6">
+                        <div class="header-top-right pull-right">
+                            <ul>
+                                <li><a href="#">{{ user.username }}<span><i class="sp-gear"></i></span></a>
+                                    <ul class="submenu">
+                                        <li><a href="{% url 'my_acc' %}">My Account</a></li>
+                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="header-search">
+                                <form action="#">
+                                    <input type="text" placeholder="Search..."/>
+                                    <button type="submit"><i class="sp-search"></i></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% else %}
+                    <div class="col-md-6 col-sm-6">
+                        <div class="header-top-right pull-right">
+                            <ul>
+                                <li><a href="#">Account <span><i class="sp-gear"></i></span></a>
+                                    <ul class="submenu">
+                                        <li><a href="{% url 'login' %}">Login</a></li>
+                                        <li><a href="{% url 'register' %}">Register</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="header-search">
+                                <form action="#">
+                                    <input type="text" placeholder="Search..."/>
+                                    <button type="submit"><i class="sp-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -102,8 +122,8 @@
                     <div class="main-menu pull-right">
                         <nav>
                             <ul>
-{#                                <li><a href="shop.html">mens</a></li>#}
-{#                                <li><a href="shop-list.html">womens</a></li>#}
+                                {#                                <li><a href="shop.html">mens</a></li>#}
+                                {#                                <li><a href="shop-list.html">womens</a></li>#}
                                 <li><a href="{% url 'shop' %}">shop</a>
                                     <div class="mega-menu">
 												<span>
@@ -161,7 +181,7 @@
                                         <li><a href="{% url 'blog' %}">Blog</a></li>
                                         <li><a href="{% url 'single_blog' %}">Single-Blog</a></li>
                                         <li><a href="{% url 'about' %}">About</a></li>
-{#                                        <li><a href="{% url '' %}">404</a></li>#}
+                                        {#                                        <li><a href="{% url '' %}">404</a></li>#}
                                         <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     </ul>
                                 </li>
@@ -170,6 +190,7 @@
                         </nav>
                     </div>
                 </div>
+
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="total-cart">
                         <ul>
