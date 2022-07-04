@@ -1,6 +1,18 @@
-{% extends 'app/base/base.html' %}
+{% extends 'app/base/base.html' %} {% load socialaccount %}
+{% providers_media_js %}
 {% block content %}
     {% load static %}
+    <body>
+
+
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">#}
+    {#    <link#}
+    {#            rel="stylesheet"#}
+    {#            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"#}
+    {#    />#}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <section class="page-content">
         <!-- PAGE-BANNER START -->
         <div class="page-banner-area  margin-bottom-80">
@@ -73,14 +85,39 @@
                 </div>
             </form>
             <div class="row g-2 mt-2">
-                <form action="/accounts/google/login/" method="post">
-                    {% csrf_token %}
-                    <button class="btn btn-outline-google-plus btn-sm d-block w-100" href="#">
-                                <span class="fab fa-google-plus-g me-2" data-fa-transform="grow-8">
-                                </span> google
-                    </button>
-                </form>
+                <ul>
+                    <form action="/accounts/google/login/" method="post">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-google-plus btn-sm d-block w-100" href="#">
+                            <li><i class="sp-google">
+                                Sign-Up With Google
+                            </i></li>
+                        </button>
+                    </form>
+                </ul>
+                <ul>
+                    <form action="/accounts/github/login/" method="post">
+                        {% csrf_token %}
+                        <button class="fab fa-github-square me-2" data-fa-transform="grow-8" href="#">
+                            <li><i class="">
+                                Sign-Up With GitHub
+                            </i></li>
+                        </button>
+                    </form>
+                </ul>
             </div>
+        </div>
+
+        <style>
+
+            element.style{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+            }
+        </style>
+
 
         </div>
 
@@ -124,3 +161,5 @@
         <!-- BRAND-LOGO-AREA END -->
     </section>
 {% endblock content %}
+
+</body>

@@ -32,12 +32,12 @@ class RegisterPage(FormView):
 
     def form_valid(self, form):
         form.save()
-        # send_email(form.data.get('email'), self.request, 'register')
-        # messages.add_message(
-        #     self.request,
-        #     level=messages.WARNING,
-        #     message='Successfully send your email, Please activate your profile'
-        # )
+        send_email(form.data.get('email'), self.request, 'register')
+        messages.add_message(
+            self.request,
+            level=messages.WARNING,
+            message='Successfully send your email, Please activate your profile'
+        )
         return super().form_valid(form)
 
     def form_invalid(self, form):
@@ -62,7 +62,7 @@ class ActivateEmailView(TemplateView):
     template_name = 'app/auth/activation_account.html'
 
     def get(self, request, *args, **kwargs):
-        uid = kwargs.get('uid')
+        uid = kwargs.get('uuid')
         token = kwargs.get('token')
 
         try:
@@ -74,7 +74,7 @@ class ActivateEmailView(TemplateView):
         if user is not None and account_activation_token.check_token(user, token):
             user.is_active = True
             user.save()
-            login(request, user)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             messages.add_message(
                 request=request,
                 level=messages.SUCCESS,

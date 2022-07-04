@@ -214,3 +214,10 @@
   position: relative;
   z-index: 1;
 }
+
+element.style{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
