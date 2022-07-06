@@ -176,8 +176,8 @@ SOCIALACCOUNT_PROVIDERS = {
         'github': {
 
             'APP': {
-                'client_id': 'ab87faa5bc7a9696627b',
-                'secret': '46c884819dfbdf3f73ccfd497cc71158ed10d2cc',
+                'client_id': 'c69116d56fa5f95bc2a2',
+                'secret': '56890e982681e9fc089c594873af7fecdc8ecec7',
                 'key': ''
 
             },
@@ -209,3 +209,4 @@ LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/'
+

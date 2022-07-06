@@ -9,14 +9,10 @@ from django import forms
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-from django.contrib.sites.models import Site
-
-
 
 from app.models import User
 from root.settings import EMAIL_HOST_USER
 from app.views.token import account_activation_token
-
 
 
 class RegistrationForm(Form):
@@ -109,13 +105,12 @@ class UserModelForm:
 
 
 def send_email(email, request, _type):
-
     user = User.objects.get(email=email)
     subject = 'Activate your account'
     current_site = get_current_site(request)
     message = render_to_string('app/auth/activation_account.html', {
         'user': user,
-        'domain': current_site.name,
+        'domain': current_site.domain,
         'uid': urlsafe_base64_encode(force_bytes(str(user.pk))),
         'token': account_activation_token.make_token(user),
     })
