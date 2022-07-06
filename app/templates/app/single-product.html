@@ -29,10 +29,14 @@
 								<!-- Tab panes -->
 								<div class="tab-content">
 									<div role="tabpanel" class="tab-pane active" id="img-one">
-										<img src="{% static 'app/img/single-product/mediam/3.jpg' %}" alt="" />
-										<a href="{% static 'app/img/single-product/large/3.jpg' %}"  data-lightbox="roadtrip" data-title="My caption">
+										{% for image_field in product.images  %}
+										    <img src="{{ image.image }}" alt="" />
+
+
+                                        <a href="{{ image_field.image.url }}"  data-lightbox="roadtrip" data-title="My caption">
 											<span class="view-full-screen" ><i class="sp-full-view"></i> view full screen</span>
 										</a>
+
 									</div>
 									<div role="tabpanel" class="tab-pane" id="img-two">
 										<img src="{% static 'app/img/single-product/mediam/2.jpg' %}" alt="" />
@@ -55,33 +59,18 @@
 								</div>
 								<!-- Nav tabs -->
 								<ul class="" >
-									<li class="active"><a href="#img-one"  data-toggle="tab"><img src="{% static 'app/img/single-product/mediam/3.jpg' %}" alt="" /></a></li>
-									<li><a href="#img-two"  data-toggle="tab"><img src="{% static 'app/img/single-product/mediam/2.jpg' %}" alt="" /></a></li>
-									<li><a href="#img-three"  data-toggle="tab"><img src="{% static 'app/img/single-product/mediam/3.jpg' %}" alt="" /></a></li>
-									<li><a href="#img-four"  data-toggle="tab"><img src="{% static 'app/img/single-product/mediam/4.jpg' %}" alt="" /></a></li>
+									<li class="active"><a href="#img-one"  data-toggle="tab"><img src="{{ image_field.image.url }}" alt="" /></a></li>
+									<li><a href="#img-two"  data-toggle="tab"><img src="{{ image_field.image.url }}" alt="" /></a></li>
+									<li><a href="#img-three"  data-toggle="tab"><img src="{{ image_field.image.url }}" alt="" /></a></li>
+									<li><a href="#img-four"  data-toggle="tab"><img src="{{ image_field.image.url }}" alt="" /></a></li>
 								</ul>
+                                {% endfor %}
 							</div>
 						</div>
 						<div class="col-md-7 col-sm-7 col-xs-12">
 							<div class="single-product-description">
-								<h3 class="title-3">Easy-iron Shirt</h3>
-								<h4>$140.00</h4>
-								<div class="pro-color">
-									<span>Color</span>
-									<a class="color-1" href="#"></a>
-									<a class="color-2" href="#"></a>
-									<a class="color-3" href="#"></a>
-									<a class="color-4" href="#"></a>
-									<a class="color-5" href="#"></a>
-								</div>
-								<div class="pro-size">
-									<span>Size</span>
-									<a href="#">xs</a>
-									<a href="#">s</a>
-									<a href="#">ml</a>
-									<a href="#">xl</a>
-									<a href="#">x</a>
-								</div>
+								<h3 class="title-3">{{ product.title }}</h3>
+								<h4>{{ product.price }}</h4>
 								<div class="product-counts fix margin-top-80">
 									<form action="#">
 										<div class="cart-plus-minus"><input type="text" value="1"/></div>

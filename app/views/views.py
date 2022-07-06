@@ -25,29 +25,11 @@ class ContactPage(TemplateView):
 class AboutPage(TemplateView):
     template_name = 'app/about.html'
 
-
-class ShopPage(TemplateView):
-    template_name = 'app/shop.html'
-
-
-class ShopListPage(TemplateView):
-    template_name = 'app/shop-list.html'
-
-
 class SingleBlogPage(TemplateView):
     template_name = 'app/single-blog.html'
 
 
-class SingleProductPage(TemplateView):
-    template_name = 'app/single-product.html'
 
-
-class ThankYouPage(TemplateView):
-    template_name = 'app/thank-you.html'
-
-
-class WishListPage(TemplateView):
-    template_name = 'app/wishlist.html'
 
 # def error(request,exception):
 #     return render(request,'app/404.html')
